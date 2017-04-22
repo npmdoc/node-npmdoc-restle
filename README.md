@@ -21,27 +21,16 @@
 ```json
 
 {
-    "name": "restle",
-    "version": "0.6.0",
-    "description": "JSON API engine.",
-    "main": "dist/lib/index.js",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/dylnslck/restle.git"
+    "author": {
+        "name": "Dylan Slack",
+        "url": "http://dylanslack.com/"
     },
-    "keywords": [
-        "rest",
-        "api",
-        "express",
-        "node",
-        "ember-data"
-    ],
-    "author": "Dylan Slack <dylanslack@gmail.com> (http://dylanslack.com/)",
-    "license": "MIT",
+    "bin": {
+        "restle": "./bin/restle"
+    },
     "bugs": {
         "url": "https://github.com/dylnslck/restle/issues"
     },
-    "homepage": "http://restle.io",
     "dependencies": {
         "babel": "^5.6.14",
         "bluebird": "^2.9.34",
@@ -57,9 +46,7 @@
         "restle-memory": "^0.1.0",
         "string-template": "^0.2.1"
     },
-    "bin": {
-        "restle": "./bin/restle"
-    },
+    "description": "JSON API engine.",
     "devDependencies": {
         "babel-eslint": "^4.0.5",
         "coveralls": "^2.11.3",
@@ -73,16 +60,10 @@
         "tap-spec": "^4.0.2",
         "tape": "^4.2.1"
     },
-    "scripts": {
-        "clean": "rimraf dist coverage",
-        "prepublish": "npm run clean && npm run build",
-        "build": "npm run build:lib && npm run build:test",
-        "build:lib": "mkdirp dist/lib && babel lib --out-dir dist/lib",
-        "build:test": "mkdirp dist/test && babel test --out-dir dist/test",
-        "test": "npm run test:lint && npm run test:server",
-        "test:lint": "eslint lib test",
-        "test:server": "npm run clean && npm run build && tape dist/test | tap-spec",
-        "test:coverage": "istanbul cover dist/test"
+    "directories": {},
+    "dist": {
+        "shasum": "eb775de05bce9c6107aeb73ba1b1b8ad5317968d",
+        "tarball": "https://registry.npmjs.org/restle/-/restle-0.6.0.tgz"
     },
     "files": [
         "dist/lib",
@@ -91,7 +72,41 @@
         "test/",
         "bin/",
         "LICENSE"
-    ]
+    ],
+    "gitHead": "c311b13b21c2deec0d1b916fb76e85e165056c90",
+    "homepage": "http://restle.io",
+    "keywords": [
+        "rest",
+        "api",
+        "express",
+        "node",
+        "ember-data"
+    ],
+    "license": "MIT",
+    "main": "dist/lib/index.js",
+    "maintainers": [
+        {
+            "name": "dcslack"
+        }
+    ],
+    "name": "restle",
+    "optionalDependencies": {},
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/dylnslck/restle.git"
+    },
+    "scripts": {
+        "build": "npm run build:lib && npm run build:test",
+        "build:lib": "mkdirp dist/lib && babel lib --out-dir dist/lib",
+        "build:test": "mkdirp dist/test && babel test --out-dir dist/test",
+        "clean": "rimraf dist coverage",
+        "prepublish": "npm run clean && npm run build",
+        "test": "npm run test:lint && npm run test:server",
+        "test:coverage": "istanbul cover dist/test",
+        "test:lint": "eslint lib test",
+        "test:server": "npm run clean && npm run build && tape dist/test | tap-spec"
+    },
+    "version": "0.6.0"
 }
 ```
 
